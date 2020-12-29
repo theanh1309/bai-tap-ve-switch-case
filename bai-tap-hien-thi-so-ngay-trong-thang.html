@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo switch case</title>
+
+</head>
+<body>
+<input type="text" id="thang"/>
+<input type="radio" name="nam" id="nhuan"> Nhuan
+<input type="radio" name="nam" id="khongnhuan"> khong nhuan
+<button onclick="tinh()">Xem</button> <br/>
+Ket qua: <span id="hienthi"></span>
+<script>
+    function tinh() {
+        let thang1 = document.getElementById("thang").value
+        switch (thang1) {
+            case "1":
+            case "3":
+            case "5":
+            case "7":
+            case "8":
+            case "10":
+            case "12":
+                document.getElementById("hienthi").innerHTML="thang co 31 ngay"
+                break
+            case "2":
+                let nhuan = document.getElementById("nhuan").checked;
+                if (nhuan) {
+                    document.getElementById("hienthi").innerHTML="thang co 29 ngay";
+                } else {
+                    document.getElementById("hienthi").innerHTML="thang co 28 ngay";
+                }
+
+                break
+            case "4":
+            case "6":
+            case "9":
+            case "11":
+                document.getElementById("hienthi").innerHTML="thang co 30 ngay"
+                break
+            default:
+                document.getElementById("hienthi").innerHTML="Gia tri nhap vao khong hop le"
+
+
+        }
+    }
+</script>
+</body>
+</html>
